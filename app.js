@@ -3,7 +3,6 @@ const helmet = require("helmet");
 
 const app = express();
 
-
 const cors = require('cors');
 
 const bodyParser = require('body-parser');
@@ -11,10 +10,6 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 
 const path = require('path');
-
-
-
-
 
 
 app.use((req, res, next) => {
@@ -36,12 +31,10 @@ app.use(helmet.xssFilter());
 app.disable("x-powered-by");
 
 
-
-
 app.use(bodyParser.json());
 
 
-mongoose.connect('mongodb+srv://jok:et24dd@cluster0.4ukig.gcp.mongodb.net/sopekocko?retryWrites=true&w=majority',
+mongoose.connect('',
     {
         useNewUrlParser: true,
         useUnifiedTopology: true
